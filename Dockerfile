@@ -21,7 +21,7 @@ RUN apk update && \
 
 # Copy only package.json to leverage Docker cache
 COPY package.json ./
-# COPY yarn.lock ./
+COPY package-lock.json ./
 
 # Enable corepack and prepare yarn 4.12.0
 # RUN corepack enable && \
