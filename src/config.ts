@@ -1,7 +1,7 @@
 import { ServerOptions } from './types/ServerOptions';
 
 export default {
-  secretKey: 'THISISMYSECURETOKEN',
+  secretKey: 'ESTETICDOCTOR_SECRET_2026',
   host: 'http://localhost',
   port: '21465',
   deviceName: 'WppConnect',
