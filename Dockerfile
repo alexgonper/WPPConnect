@@ -48,4 +48,4 @@ RUN apk add --no-cache \
 
 ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 EXPOSE 21465
-ENTRYPOINT ["node", "dist/server.js"]
+ENTRYPOINT ["node", "--max-old-space-size=150", "dist/server.js"]
