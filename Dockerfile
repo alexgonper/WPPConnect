@@ -28,6 +28,7 @@ COPY package-lock.json ./
 # corepack prepare yarn@4.12.0 --activate
 
 # Install dependencies with immutable lockfile
+RUN npm install -g node-gyp
 RUN npm ci --legacy-peer-deps
 
 FROM base AS build
