@@ -25,15 +25,15 @@ COPY package-lock.json ./
 
 # Enable corepack and prepare yarn 4.12.0
 # RUN corepack enable && \
-    # corepack prepare yarn@4.12.0 --activate
+# corepack prepare yarn@4.12.0 --activate
 
 # Install dependencies with immutable lockfile
-RUN npm ci
+RUN npm ci --legacy-peer-deps
 
 FROM base AS build
 WORKDIR /usr/src/wpp-server
 COPY . .
-RUN npm ci
+RUN npm ci --legacy-peer-deps
 RUN npm run build
 
 FROM build AS runtime
