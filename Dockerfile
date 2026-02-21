@@ -46,5 +46,6 @@ RUN apk add --no-cache \
     vips \
     fftw
 
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 EXPOSE 21465
 ENTRYPOINT ["node", "dist/server.js"]
